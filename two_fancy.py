@@ -1,17 +1,8 @@
-import time
-import board
+import board  # pylint: disable-msg=import-error
+from fancyLED import FancyLED  # pylint: disable-msg=import-error
 
-from fancyLED import FancyLED
-
-D2 = board.D2
-D3 = board.D3
-D4 = board.D4
-D5 = board.D5
-D6 = board.D6
-D7 = board.D7
-
-fancy1 = FancyLED(D2, D3, D4)
-fancy2 = FancyLED(D5, D6, D7)
+fancy1 = FancyLED(board.D2, board.D3, board.D4)
+fancy2 = FancyLED(board.D5, board.D6, board.D7)
 
 while True:
     fancy1.alternate()
